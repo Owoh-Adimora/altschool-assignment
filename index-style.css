@@ -1,0 +1,222 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(24, 32, 32);
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 500;
+            background-color: rgb(8, 1, 1);
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+            justify-content: space-around;
+            width: 100%;
+            height: 60px;
+            background-color: rgba(16, 22, 47, 0.4);
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            list-style-type: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: rgba(225, 206, 135, 0.699);
+            font-size: 20px;
+            display: block;
+            padding: 20px 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .cont1 {
+            width: 90%; /* Adjusted for mobile */
+            padding: 20px;
+            text-align: center;
+            margin: 10px auto; /* Centering for all screens */
+            background-color: rgba(30, 23, 35, 0.872);
+            border: 0;
+        }
+
+        .cont1 h1 {
+            color: rgba(87, 31, 15, 0.808);
+            margin-bottom: 20px;
+            font-size: 2em;
+            text-shadow: 2px 2px 5px rgba(172, 161, 148, 0.79);
+        }
+
+        .cont1 img {
+            width: 100%;
+            height: auto;
+        }
+
+        main {
+            padding: 20px;
+            background-color: silver;
+            width: 90%; /* Adjusted for mobile */
+            margin: 10px auto; /* Centering for all screens */
+            border: 0;
+            overflow-y: auto;
+            scrollbar-width: none;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 40px 0;
+            color: rgba(35, 31, 16, 0.699);
+            font-size: 1.8em;
+        }
+
+        h4 {
+            color: rgba(176, 74, 196, 0.918);
+        }
+
+        p {
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+
+        ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(16, 22, 47, 0.4);
+            margin-top: 20px;
+        }
+
+        footer {
+            width: 100%;
+            background-color: rgb(5, 5, 43);
+            font-size: 15px;
+            color: wheat;
+            border-radius: 5px;
+            position: sticky;
+            bottom: 0;
+            padding: 2px;
+        }
+
+        /* Sidebar Style */
+        #menu {
+            width: 150px;
+            height: 50vh;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            top: 80px; /* Adjusted to avoid overlapping with navbar */
+            left: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Sidebar list items */
+        #menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Sidebar list item links */
+        #menu ul li {
+            margin: 15px 0;
+        }
+
+        #menu ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        #menu ul li a:hover {
+            background-color: #575757;
+        }
+
+        /* Main content adjusted to leave space for the sidebar */
+        #main-content {
+            margin-left: 180px; /* Adjusted margin for sidebar width */
+            padding: 20px;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column; /* Stack navigation items on smaller screens */
+                height: auto; /* Adjust height for stacked items */
+            }
+
+            #menu {
+                position: relative;
+                width: 100%;
+                height: auto;
+                top: 0;
+                left: 0;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+
+            .cont1, main {
+                width: 100%;
+                margin: 0; /* Remove extra margin */
+            }
+
+            #main-content {
+                margin-left: 0; /* Reset margin for small screens */
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .cont1, main {
+                width: 48%; /* Better layout for medium-sized screens */
+                margin: 1%; /* Small margin between containers */
+            }
+
+            .container {
+                flex-direction: row;
+                flex-wrap: wrap; /* Allows wrapping in medium screens */
+                justify-content: space-around; /* Space between items */
+            }
+
+            #main-content {
+                margin-left: 180px; /* Adjust for the sidebar */
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .cont1 {
+                width: 35%;
+            }
+
+            main {
+                width: 60%;
+                height: auto;
+            }
+
+            #main-content {
+                margin-left: 180px; /* Adjust for the sidebar */
+            }
+        }
+    
